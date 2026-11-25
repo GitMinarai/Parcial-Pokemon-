@@ -181,4 +181,7 @@ public class CSV {
 
         return null;
     }
+
+    //Organización Trainer: id;nombre;medalla1|medalla2|medalla3
+    //Organización Pokemon: id;cantidad;nombre;tipo;nivel;trainer
 }
