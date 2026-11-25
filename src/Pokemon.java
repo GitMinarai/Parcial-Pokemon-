@@ -1,5 +1,6 @@
 public class Pokemon {
 
+    //Variables
     private int id;
     private int numeroPokemon;
     public String nombre;
@@ -7,7 +8,7 @@ public class Pokemon {
     public int nivel;
     public String nombreEntrenador;
 
-
+    //Constructor
     public Pokemon(int id, int numeroPokemon, String nombre,
                    String tipo, int nivel, String nombreEntrenador) {
 
@@ -19,7 +20,7 @@ public class Pokemon {
         this.nombreEntrenador = nombreEntrenador;
     }
 
-
+    //Encapsulamiento
     public int getId() {
         return id;
     }
@@ -32,7 +33,7 @@ public class Pokemon {
     public String toString() {
         return "Pokemon: " + nombre +
                 " | ID: " + id +
-                " | Numero: " + numeroPokemon +
+                " | Cantidad: " + numeroPokemon +
                 " | Tipo: " + tipo +
                 " | Nivel: " + nivel +
                 " | Entrenador: " + nombreEntrenador;
