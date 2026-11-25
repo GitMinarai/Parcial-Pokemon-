@@ -21,6 +21,9 @@ public class Interfaz {
 
     public Interfaz() {
 
+        panelMedallas.setLayout(new BoxLayout(panelMedallas, BoxLayout.Y_AXIS));
+        panelPokemones.setLayout(new BoxLayout(panelPokemones, BoxLayout.Y_AXIS));
+
         entrenadores = CSV.leerEntrenadores();
         CSV.leerPokemones(entrenadores);
 
