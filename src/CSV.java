@@ -7,7 +7,8 @@ import java.util.ArrayList;
 
 public class CSV {
 
-    //Guardar entrenadores
+    // Guardar entrenadores
+
     public static void guardarEntrenadores(ArrayList<Trainer> entrenadores) {
 
         try {
@@ -34,7 +35,8 @@ public class CSV {
         }
     }
 
-    //Leer entrenadores
+    // Leer entrenadores
+
     public static ArrayList<Trainer> leerEntrenadores() {
 
         ArrayList<Trainer> entrenadores = new ArrayList<>();
@@ -75,7 +77,8 @@ public class CSV {
         return entrenadores;
     }
 
-    //Guardar Pokemones
+    // Guardar Pokemones
+
     public static void guardarPokemones(ArrayList<Trainer> entrenadores) {
 
         try {
@@ -106,7 +109,8 @@ public class CSV {
         }
     }
 
-    //Leer Pokemones
+    // Leer Pokemones
+
     public static void leerPokemones(ArrayList<Trainer> entrenadores) {
 
         try {
@@ -143,5 +147,36 @@ public class CSV {
         } catch (IOException e) {
             System.out.println("Error al leer Pokémon: " + e.getMessage());
         }
+    }
+
+    // Búsqueda Entrenador
+
+    public static Trainer buscarEntrenador(ArrayList<Trainer> entrenadores, String nombre) {
+
+        for (Trainer entrenador : entrenadores) {
+
+            if (entrenador.name.equalsIgnoreCase(nombre)) {
+                return entrenador;
+            }
+        }
+
+        return null;
+    }
+
+    // Búsqueda Pokemones
+
+    public static Pokemon buscarPokemon(ArrayList<Trainer> entrenadores, String nombre) {
+
+        for (Trainer entrenador : entrenadores) {
+
+            for (Pokemon pokemon : entrenador.pokemons) {
+
+                if (pokemon.nombre.equalsIgnoreCase(nombre)) {
+                    return pokemon;
+                }
+            }
+        }
+
+        return null;
     }
 }

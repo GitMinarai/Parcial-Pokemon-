@@ -11,7 +11,7 @@ public class Main {
         Pokemon pikachu = new Pokemon(1, 1, "Pikachu", "Electrico", 67, "Ash");
         Pokemon charizard = new Pokemon(2, 1, "Charizard", "Fuego", 69, "Ash");
 
-        // Asignacion
+        // Asignación
         ash.addPokemon(pikachu);
         ash.addPokemon(charizard);
 
@@ -40,6 +40,26 @@ public class Main {
             for (Pokemon pokemon : entrenador.pokemons) {
                 System.out.println(pokemon);
             }
+        }
+
+        // Buscar entrenador
+
+        Trainer encontrado = CSV.buscarEntrenador(recuperados, "Ash");
+
+        if (encontrado != null) {
+            System.out.println("Entrenador encontrado: " + encontrado);
+        } else {
+            System.out.println("Entrenador no encontrado.");
+        }
+
+        // Buscar Pokemon
+
+        Pokemon encontradoPokemon = CSV.buscarPokemon(recuperados, "Pikachu");
+
+        if (encontradoPokemon != null) {
+            System.out.println("Pokemon encontrado: " + encontradoPokemon);
+        } else {
+            System.out.println("Pokemon no encontrado.");
         }
     }
 }
