@@ -1,3 +1,5 @@
+package Modelo;
+
 public class Pokemon {
 
     //Variables
@@ -31,7 +33,7 @@ public class Pokemon {
 
     @Override
     public String toString() {
-        return "Pokemon: " + nombre +
+        return "Modelo.Pokemon: " + nombre +
                 " | ID: " + id +
                 " | Cantidad: " + numeroPokemon +
                 " | Tipo: " + tipo +

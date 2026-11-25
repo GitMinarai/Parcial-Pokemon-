@@ -1,3 +1,5 @@
+package Modelo;
+
 import java.util.ArrayList;
 
 public class Trainer {
@@ -33,9 +35,9 @@ public class Trainer {
 
     @Override
     public String toString() {
-        return "Trainer: " + name +
+        return "Modelo.Trainer: " + name +
                 " | ID: " + id +
-                " | Cantidad de Pokemon: " + pokemons.size() +
+                " | Cantidad de Modelo.Pokemon: " + pokemons.size() +
                 " | Medallas: " + medals;
     }
 }

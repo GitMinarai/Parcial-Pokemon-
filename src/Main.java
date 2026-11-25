@@ -1,5 +1,9 @@
 import java.util.ArrayList;
+import Modelo.*;
 import forms.Interfaz;
+import Modelo.CSV;
+import Modelo.Pokemon;
+import Modelo.Trainer;
 
 public class Main {
 
@@ -25,11 +29,11 @@ public class Main {
         ArrayList<Trainer> entrenadores = new ArrayList<>();
         entrenadores.add(ash);
 
-        // Guardar en CSV
+        // Guardar en Modelo.CSV
         CSV.guardarEntrenadores(entrenadores);
         CSV.guardarPokemones(entrenadores);
 
-        // Leer CSV
+        // Leer Modelo.CSV
         ArrayList<Trainer> recuperados = CSV.leerEntrenadores();
         CSV.leerPokemones(recuperados);
 
@@ -53,14 +57,14 @@ public class Main {
             System.out.println("Entrenador no encontrado.");
         }
 
-        // Buscar Pokemon
+        // Buscar Modelo.Pokemon
 
         Pokemon encontradoPokemon = CSV.buscarPokemon(recuperados, "Pikachu");
 
         if (encontradoPokemon != null) {
-            System.out.println("Pokemon encontrado: " + encontradoPokemon);
+            System.out.println("Modelo.Pokemon encontrado: " + encontradoPokemon);
         } else {
-            System.out.println("Pokemon no encontrado.");
+            System.out.println("Modelo.Pokemon no encontrado.");
         }
     }
 }
