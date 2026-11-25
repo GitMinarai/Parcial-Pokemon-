@@ -38,4 +38,5 @@ public class Pokemon {
                 " | Nivel: " + nivel +
                 " | Entrenador: " + nombreEntrenador;
     }
+
 }
