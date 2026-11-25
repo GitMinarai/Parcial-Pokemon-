@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
@@ -21,6 +22,22 @@ public class Main {
 
         for (Pokemon pokemon : ash.pokemons) {
             System.out.println(pokemon);
+        }
+
+        //Guardar en el CSV
+
+        ArrayList<Trainer> entrenadores = new ArrayList<>();
+
+        entrenadores.add(ash);
+
+        CSV.guardarEntrenadores(entrenadores);
+
+        //Leer el CSV
+
+        ArrayList<Trainer> recuperados = CSV.leerEntrenadores();
+
+        for (Trainer entrenador : recuperados) {
+            System.out.println("Recuperado: " + entrenador);
         }
     }
 
